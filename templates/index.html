@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="register-container">
+    <h2>Registro com reconhecimento facial</h2>
+
+    <form action="" id="register-form">
+      <input type="text" name="username" id="username" placeholder="Usuário" required>
+
+      <div class="camera-container">
+        <video src="" id="video" height="auto" width="100%" autoplay></video>
+        <button type="button" id="capture-button">Capturar Rosto</button>
+        <canvas style="display: none;" id="canvas" width="300" height="200"></canvas>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+    <div id="message"></div>
+  </div>
+
+  <script>
+
+    const video = document.getElementById('video')
+    const canvas = document.getElementById('canvas')
+    const captureButton = document.getElementById('capture-button')
+    const registerForm = document.getElementById('register-form')
+    const messageDiv = document.getElementById('message')
+
+    let capturedImage = null
+
+    navigator.mediaDevices.getUserMedia({video: true}).then((stream) => {
+      video.srcObject = stream
+    }).catch((err) => {
+      console.log("Erro ao acessar camera")
+      messageDiv.innerHTML = "Erro ao acessar camera"
+    })
+
+    captureButton.addEventListener('click', ()=>{
+      if (!video.srcObject){
+        messageDiv.innerHTML = "Por favor, Habilite sua câmera!"
+      }
+      const context = canvas.getContext("2d")
+      context.drawImage(video, 0,0, canvas.width, canvas.height)
+      capturedImage = canvas.toDataURL('image/jpeg')
+      messageDiv.innerHTML='Captura Facial realizada com sucesso!'
+    })
+
+    registerForm.onsubmit = async (e) => {
+      e.preventDefault()
+
+      if(!capturedImage){
+        messageDiv.innerHTML = "Please capture a face"
+        return
+      }
+
+      const formData = new FormData(registerForm)
+      formData.append('face_image', capturedImage)
+      const response = await fetch('/register/', {
+        method : 'POST',
+        body : formData
+      });
+
+      const data = await response.data();
+      messageDiv.innerText = data.mediaDevices || 'Registro falho'
+
+    }
+
+  </script>
+</body>
+</html>
