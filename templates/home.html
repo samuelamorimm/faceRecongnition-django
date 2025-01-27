@@ -1,0 +1,224 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Web Design Mastery | Digital</title>
+
+    <style>
+      .container {
+        background-image: url("{% static 'assets/bg.png' %}");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#">
+              <img src="{%static 'assets/logo.png'%}" alt="logo" />
+              <span>SafeFace</span>
+            </a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Planos</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+      <header class="header__container">
+        <div class="header__image">
+          <img src="{% static 'assets/header.png'%}" alt="header" />
+        </div>
+        <div class="header__content">
+          <h2>SAFEFACE AGENCY</h2>
+          <h1>
+            Transformando<br /><span class="h1__span-1">controle de acesso</span> <br>
+            <span class="h1__span-2">com reconhecimento facial</span>
+          </h1>
+          <p>
+            From concept to launch, our expert team is dedicated to delivering
+            exceptional solutions tailored to your needs. Let's bring your vision
+            to life and create something extraordinary together.
+          </p>
+          <div class="header__btn">
+            <button class="btn">Saiba Mais</button>
+          </div>
+          <ul class="socials">
+            <li>
+              <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-youtube-fill"></i></a>
+            </li>
+          </ul>
+          <div class="header__bar">
+            Copyright © 2024 Web Design Mastery. All rights reserved.
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- container-div -->
+
+    <div class="container">
+      <div class="container-plans">
+          <h1>Nossos Planos</h1>
+
+          <div class="plans-area">
+
+            <div class="plans">
+              <h1>BASIC</h1>
+              <ul>
+                <li><span>Limite de usuários</span> <span>até 50</span></li>
+                <li><span>Monitoramento</span>  <span>Tempo real</span></li>
+                <li><span>Suporte</span> <span>Via email para dúvidas</span></li>
+                <li><span>Preço Mensal</span> <span>R$ 49,00</span></li>
+              </ul>
+            </div>
+
+            <div class="plans">
+              <h1>PRO</h1>
+              <ul>
+                <li><span>Incluso</span><span>Tudo do BASIC</span></li>
+                <li><span>Limite de usuários</span> <span>até 500</span></li>
+                <li><span>Relatórios</span>  <span>Análises detalhadas e relatórios</span></li>
+                <li><span>Preço Mensal</span> <span>R$ 199,00</span></li>
+              </ul>
+            </div>
+
+            <div class="plans">
+              <h1>ENTERPRISE</h1>
+              <ul>
+                <li><span>Incluso</span><span>Tudo do BASIC & PRO</span></li>
+                <li><span>Limite de usuários</span> <span>Ilimitado</span></li>
+                <li><span>Suporte</span>  <span>Dedicado e Rápido</span></li>
+                <li><span>Preço Mensal</span> <span>R$ 299,00</span></li>
+              </ul>
+            </div>
+
+          </div>
+          <button class="btn">ASSINAR</button>
+      </div>
+    </div>
+
+    <!-- container-div -->
+
+    <div class="container">
+      <div class="container-about">
+
+        <div class="about">
+          <h1>Quem Somos</h1>
+
+          <p>Somos a SafeFace, uma empresa de tecnologia especializada em soluções de controle de acesso com reconhecimento facial. Nossa missão é unir inovação, segurança e simplicidade para transformar o dia a dia de pessoas e empresas. </p>
+          <p>Com tecnologia de ponta e uma equipe altamente qualificada, criamos sistemas que oferecem identificação precisa, monitoramento em tempo real e integração eficiente com outras plataformas. Nosso objetivo é facilitar a gestão de acessos, garantindo tranquilidade e proteção em qualquer ambiente.</p>
+          <p>Estamos comprometidos com a privacidade e a proteção dos dados de nossos clientes, utilizando métodos avançados de criptografia para oferecer máxima segurança. Seja em empresas, residências, eventos ou instituições, o SafeFace é a solução confiável e moderna que você precisa.</p>
+
+          <hr>
+
+          <h1>Valores</h1>
+          <ul>
+            <li><span>Inovação:</span> Tecnologia de ponta sempre à frente.</li>
+            <li><span>Segurança:</span> Privacidade e proteção em primeiro lugar.</li>
+            <li><span>Confiabilidade:</span> Soluções robustas e eficazes.</li>
+            <li><span>Simplicidade:</span> Experiência fácil e intuitiva.</li>
+          </ul>
+        </div>
+
+        <div class="faq">
+          <h1>Perguntas Frequentes</h1>
+
+          <ul>
+            <li class="item-faq item-faq1">
+              <span>Como funciona o reconhecimento facial do SafeFace?</span>
+              <i class="fa-solid fa-plus"></i>
+            </li>
+            <li class="resp" id="resp1" style="display: none;">Nosso sistema utiliza tecnologia de inteligência artificial para identificar rostos em tempo real com alta precisão. Ele analisa pontos únicos do rosto de cada pessoa, garantindo um acesso seguro e rápido.</li>
+
+            <li class="item-faq">
+              <span>Os dados dos usuários são armazenados com segurança?</span>
+              <i class="fa-solid fa-plus"></i>
+            </li>
+            <li class="resp" id="rep">Sim! A segurança dos dados é nossa prioridade. Todos os dados são criptografados e armazenados em servidores seguros, em conformidade com as regulamentações de privacidade, como a LGPD.</li>
+
+            <li class="item-faq">
+              <span>É necessário algum equipamento específico para usar o SafeFace?</span>
+              <i class="fa-solid fa-plus"></i>
+            </li>
+            <span>
+              <li class="resp" id="resp">Nosso sistema funciona com câmeras comuns ou dispositivos de segurança já instalados. No entanto, para melhores resultados, recomendamos câmeras com boa resolução e iluminação adequada.</li>
+            </span>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- container-div -->
+
+    <div class="container">
+
+      <div class="feedback-users">
+        <h1>Feedbacks Recentes</h1>
+
+        <ul>
+          <li>
+            <h1>
+              Ana Rodrigues
+              <span>
+                (<i class="fa-solid fa-star" style="color: yellow;"></i>
+                <i class="fa-solid fa-star" style="color: yellow;"></i>
+                <i class="fa-solid fa-star" style="color: yellow;"></i>
+                <i class="fa-solid fa-star" style="color: yellow;"></i>
+                <i class="fa-solid fa-star" style="color: yellow;"></i>)
+              </span>
+            </h1>
+            <p>"O SafeFace revolucionou o controle de acesso na nossa empresa. É super fácil de usar, e o reconhecimento facial funciona perfeitamente! O suporte técnico também foi excelente durante a instalação."</p>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="feedback-area">
+        <h1>Deixe um FeedBack:</h1>
+
+        <form action="" class="feedback-form">
+          <input type="text" class="input-name" placeholder="Nome">
+          <input type="email" name="" id="" class="email" placeholder="Email">
+
+          <div class="star-area">
+            <i class="fa-solid fa-star star"></i>
+            <i class="fa-solid fa-star star"></i>
+            <i class="fa-solid fa-star star"></i>
+            <i class="fa-solid fa-star star"></i>
+            <i class="fa-solid fa-star star"></i>
+          </div>
+
+          <textarea name="" id="feedback-text" placeholder="FeedBack">
+          </textarea>
+        </form>
+      </div>
+
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="{%static 'js/main.js'%}"></script>
+  </body>
+</html>

@@ -7,6 +7,8 @@ from .models import *
 import face_recognition
 
 # Create your views here.
+def home(request):
+  return render(request, 'home.html')
 
 @csrf_exempt
 def register(request):
