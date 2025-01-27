@@ -1,23 +1,27 @@
-const menuBtn = document.getElementById("menu-btn");
+  const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
 const itemFaq = document.querySelectorAll('.item-faq')
 
-itemFaq.forEach(item => {
-  item.addEventListener('click', () => {
-    if (item.classList == 'item-faq item-faq1') {
-      const resp1 = document.querySelector('#resp1')
-      resp1.style.display = 'flex'
-      resp1.classList.add('animation-resp')
-      item.classList.add('active')
-    } else if (item.classList == 'item-faq item-faq1 active'){
-      const resp1 = document.querySelector('#resp1')
-      resp1.style.display = 'none'
-      resp1.classList.remove('animation-resp')
-      item.classList.remove('active')
-    }
+// animacao-scrool ---------------------
+
+const myObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+      console.log(entry)
+      if(entry.isIntersecting) { // se o elemento estiver na tela
+        entry.target.classList.add('show')
+      } else { // se o elemento não estiver na tela
+          entry.target.classList.remove('show')
+      }
   })
-});
+})
+
+const elements = document.querySelectorAll(".hidden")
+
+
+elements.forEach((elements) => myObserver.observe(elements))
+
+// animacao-scrool ---------------------
 
 menuBtn.addEventListener("click", (e) => {
   navLinks.classList.toggle("open");

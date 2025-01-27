@@ -11,7 +11,7 @@
     />
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Web Design Mastery | Digital</title>
+    <title>SafeFace</title>
 
     <style>
       .container {
@@ -69,9 +69,7 @@
               <a href="#"><i class="ri-youtube-fill"></i></a>
             </li>
           </ul>
-          <div class="header__bar">
-            Copyright © 2024 Web Design Mastery. All rights reserved.
-          </div>
+          
         </div>
       </header>
     </div>
@@ -79,12 +77,12 @@
     <!-- container-div -->
 
     <div class="container">
-      <div class="container-plans">
+      <div class="container-plans hidden">
           <h1>Nossos Planos</h1>
 
           <div class="plans-area">
 
-            <div class="plans">
+            <div class="plans hidden">
               <h1>BASIC</h1>
               <ul>
                 <li><span>Limite de usuários</span> <span>até 50</span></li>
@@ -94,7 +92,7 @@
               </ul>
             </div>
 
-            <div class="plans">
+            <div class="plans hidden">
               <h1>PRO</h1>
               <ul>
                 <li><span>Incluso</span><span>Tudo do BASIC</span></li>
@@ -104,7 +102,7 @@
               </ul>
             </div>
 
-            <div class="plans">
+            <div class="plans hidden">
               <h1>ENTERPRISE</h1>
               <ul>
                 <li><span>Incluso</span><span>Tudo do BASIC & PRO</span></li>
@@ -146,24 +144,24 @@
           <h1>Perguntas Frequentes</h1>
 
           <ul>
-            <li class="item-faq item-faq1">
+            <li class="item-faq item-faq1 hidden">
               <span>Como funciona o reconhecimento facial do SafeFace?</span>
               <i class="fa-solid fa-plus"></i>
             </li>
-            <li class="resp" id="resp1" style="display: none;">Nosso sistema utiliza tecnologia de inteligência artificial para identificar rostos em tempo real com alta precisão. Ele analisa pontos únicos do rosto de cada pessoa, garantindo um acesso seguro e rápido.</li>
+            <li class="resp hidden" id="resp1">Nosso sistema utiliza tecnologia de inteligência artificial para identificar rostos em tempo real com alta precisão. Ele analisa pontos únicos do rosto de cada pessoa, garantindo um acesso seguro e rápido.</li>
 
-            <li class="item-faq">
+            <li class="item-faq hidden">
               <span>Os dados dos usuários são armazenados com segurança?</span>
               <i class="fa-solid fa-plus"></i>
             </li>
-            <li class="resp" id="rep">Sim! A segurança dos dados é nossa prioridade. Todos os dados são criptografados e armazenados em servidores seguros, em conformidade com as regulamentações de privacidade, como a LGPD.</li>
+            <li class="resp hidden" id="rep">Sim! A segurança dos dados é nossa prioridade. Todos os dados são criptografados e armazenados em servidores seguros, em conformidade com as regulamentações de privacidade, como a LGPD.</li>
 
-            <li class="item-faq">
+            <li class="item-faq hidden">
               <span>É necessário algum equipamento específico para usar o SafeFace?</span>
               <i class="fa-solid fa-plus"></i>
             </li>
             <span>
-              <li class="resp" id="resp">Nosso sistema funciona com câmeras comuns ou dispositivos de segurança já instalados. No entanto, para melhores resultados, recomendamos câmeras com boa resolução e iluminação adequada.</li>
+              <li class="resp hidden" id="resp">Nosso sistema funciona com câmeras comuns ou dispositivos de segurança já instalados. No entanto, para melhores resultados, recomendamos câmeras com boa resolução e iluminação adequada.</li>
             </span>
           </ul>
         </div>
@@ -173,50 +171,101 @@
 
     <!-- container-div -->
 
-    <div class="container">
+    <div class="container container-footer">
 
-      <div class="feedback-users">
-        <h1>Feedbacks Recentes</h1>
+      <div class="container-feedback">
+        <div class="feedback-users">
+          <h1>Feedbacks Recentes</h1>
+          <ul class="hidden">
+            <li class="hidden">
+              <h1>
+                Ana Rodrigues
+                <span>
+                  (<i class="fa-solid fa-star" style="color: yellow;"></i>
+                  <i class="fa-solid fa-star" style="color: yellow;"></i>
+                  <i class="fa-solid fa-star" style="color: yellow;"></i>
+                  <i class="fa-solid fa-star" style="color: yellow;"></i>
+                  <i class="fa-solid fa-star" style="color: yellow;"></i>)
+                </span>
+              </h1>
+              <p>"O SafeFace revolucionou o controle de acesso na nossa empresa. É super fácil de usar, e o reconhecimento facial funciona perfeitamente! O suporte técnico também foi excelente durante a instalação."</p>
+            </li>
+            <li class="hidden">
+              <h1>
+                Ana Rodrigues
+                <span>
+                  (<i class="fa-solid fa-star" style="color: yellow;"></i>
+                  <i class="fa-solid fa-star" style="color: yellow;"></i>
+                  <i class="fa-solid fa-star" style="color: yellow;"></i>
+                  <i class="fa-solid fa-star" style="color: yellow;"></i>
+                  <i class="fa-solid fa-star" style="color: yellow;"></i>)
+                </span>
+              </h1>
+              <p>"O SafeFace revolucionou o controle de acesso na nossa empresa. É super fácil de usar, e o reconhecimento facial funciona perfeitamente! O suporte técnico também foi excelente durante a instalação."</p>
+            </li>
+            <li class="hidden">
+              <h1>
+                Ana Rodrigues
+                <span>
+                  (<i class="fa-solid fa-star" style="color: yellow;"></i>
+                  <i class="fa-solid fa-star" style="color: yellow;"></i>
+                  <i class="fa-solid fa-star" style="color: yellow;"></i>
+                  <i class="fa-solid fa-star" style="color: yellow;"></i>
+                  <i class="fa-solid fa-star" style="color: yellow;"></i>)
+                </span>
+              </h1>
+              <p>"O SafeFace revolucionou o controle de acesso na nossa empresa. É super fácil de usar, e o reconhecimento facial funciona perfeitamente! O suporte técnico também foi excelente durante a instalação."</p>
+            </li>
 
-        <ul>
-          <li>
-            <h1>
-              Ana Rodrigues
-              <span>
-                (<i class="fa-solid fa-star" style="color: yellow;"></i>
-                <i class="fa-solid fa-star" style="color: yellow;"></i>
-                <i class="fa-solid fa-star" style="color: yellow;"></i>
-                <i class="fa-solid fa-star" style="color: yellow;"></i>
-                <i class="fa-solid fa-star" style="color: yellow;"></i>)
-              </span>
-            </h1>
-            <p>"O SafeFace revolucionou o controle de acesso na nossa empresa. É super fácil de usar, e o reconhecimento facial funciona perfeitamente! O suporte técnico também foi excelente durante a instalação."</p>
-          </li>
-        </ul>
+            <li class="hidden">
+              <h1>
+                Ana Rodrigues
+                <span>
+                  (<i class="fa-solid fa-star" style="color: yellow;"></i>
+                  <i class="fa-solid fa-star" style="color: yellow;"></i>
+                  <i class="fa-solid fa-star" style="color: yellow;"></i>
+                  <i class="fa-solid fa-star" style="color: yellow;"></i>
+                  <i class="fa-solid fa-star" style="color: yellow;"></i>)
+                </span>
+              </h1>
+              <p>"O SafeFace revolucionou o controle de acesso na nossa empresa. É super fácil de usar, e o reconhecimento facial funciona perfeitamente! O suporte técnico também foi excelente durante a instalação."</p>
+            </li>
+          </ul>
+        </div>
+        <div class="feedback-area">
+          <h1>Deixe um FeedBack:</h1>
+          <form action="" class="feedback-form">
+            <label for="">Selecione: 1 a 5</label>
+            <div class="star-area">
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+            </div>
+
+            <label for="">Nome:</label>
+            <input type="text" class="input-name" placeholder="Digite aqui...">
+
+            <label for="">Email:</label>
+            <input type="email" name="" id="" class="email" placeholder="Digite aqui...">
+
+            <label for="">Seu feedback:</label>
+            <input type="text" class="feedback-text" placeholder="Digite aqui...">
+
+            <input type="submit" value="ENVIAR" class="input-sub">
+          </form>
+        </div>
       </div>
+      
 
-
-      <div class="feedback-area">
-        <h1>Deixe um FeedBack:</h1>
-
-        <form action="" class="feedback-form">
-          <input type="text" class="input-name" placeholder="Nome">
-          <input type="email" name="" id="" class="email" placeholder="Email">
-
-          <div class="star-area">
-            <i class="fa-solid fa-star star"></i>
-            <i class="fa-solid fa-star star"></i>
-            <i class="fa-solid fa-star star"></i>
-            <i class="fa-solid fa-star star"></i>
-            <i class="fa-solid fa-star star"></i>
-          </div>
-
-          <textarea name="" id="feedback-text" placeholder="FeedBack">
-          </textarea>
-        </form>
-      </div>
-
+      <footer>
+        
+          Copyright © 2024 Web Design Mastery. All rights reserved.
+      
+      </footer>
     </div>
+    
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="{%static 'js/main.js'%}"></script>
