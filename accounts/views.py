@@ -29,7 +29,7 @@ def register(request):
     return JsonResponse({
       'status': 'success', 'message':'Usuário registrado com sucesso!'
     })
-  return render(request, 'index.html')
+  return render(request, 'register_face.html')
 
 @csrf_exempt
 def login_user(request):
@@ -61,4 +61,4 @@ def login_user(request):
         return JsonResponse({'status' : 'success', 'message' : 'Logged in sucess'})
       else:
         return JsonResponse({'status' : 'error', 'message' : 'Logged in failed'})
-  return render(request, 'login.html')
+  return render(request, 'login_face.html')

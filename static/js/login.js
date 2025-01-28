@@ -36,7 +36,7 @@ formData.append('username', document.getElementById('username').value);
 formData.append('face_image', capturedImage);
 
 try {
-  const response = await fetch('/login/', {
+  const response = await fetch('/login_face/', {
     method: 'POST',
     body: formData,
   });

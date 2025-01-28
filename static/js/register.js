@@ -36,7 +36,7 @@ registerForm.onsubmit = async (e) => {
   formData.append('face_image', capturedImage)
 
   try {
-    const response = await fetch('/register/', {
+    const response = await fetch('/register_face/', {
       method : 'POST',
       body : formData
     });
