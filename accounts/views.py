@@ -7,6 +7,9 @@ from .models import *
 import face_recognition
 
 # Create your views here.
+def dashboard(request):
+  return render(request, 'base.html')
+
 def home(request):
   return render(request, 'home.html')
 

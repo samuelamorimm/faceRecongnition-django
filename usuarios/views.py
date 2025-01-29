@@ -14,6 +14,7 @@ def cadastro(request):
     else:
         if request.method == 'POST':
             username = request.POST.get('email')
+            name_user = request.POST.get('name')
             cpf = request.POST.get('cpf')
             email = request.POST.get('email')
             password = request.POST.get('password')
@@ -30,12 +31,18 @@ def cadastro(request):
             
             user = User.objects.create_user(
                 username=username,
-                cpf=cpf,
                 email=email,
                 password=password,
             )
+
+            Cliente.objects.create(
+                user=user,
+                nome=name_user,
+                cpf=cpf,
+                email=email
+            )
             
-            return redirect('login_face')
+            return redirect('login')
 
 
         
@@ -50,7 +57,7 @@ def login(request):
             user = authenticate(request, username=username, password=password)
             if user:
                 login_django(request, user)
-                return redirect('login_face')
+                return redirect('dashboard')
             else:
                 messages.error(request, 'Usuário ou senha incorretos!')
                 return redirect('login')
