@@ -1,31 +1,23 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-  <div class="register-container">
-    <h2>Registro com reconhecimento facial</h2>
 
-    <form action="" id="register-form">
-      <input type="text" name="username" id="username" placeholder="Usuário" required>
-
-      <div class="camera-container">
-        <video src="" id="video" height="auto" width="500px" autoplay></video>
-        <button type="button" id="capture-button">Capturar Rosto</button>
-        <canvas style="display: none;" id="canvas" width="300" height="200"></canvas>
-      </div>
-
-      <button type="submit">Register</button>
-    </form>
-    <div id="message"></div>
+  {% block content %}
+  <div class="container">
+    <div class="register-container">
+      <h2>Registro com reconhecimento facial</h2>
+      <form action="" id="register-form">
+        <input type="text" name="username" id="username" placeholder="Usuário" required>
+        <div class="camera-container">
+          <video src="" id="video" height="auto" width="500px" autoplay></video>
+          <button type="button" id="capture-button">Capturar Rosto</button>
+          <canvas style="display: none;" id="canvas" width="300" height="200"></canvas>
+        </div>
+        <button type="submit">Register</button>
+      </form>
+      <div id="message"></div>
+    </div>
   </div>
-
   <script src="{% static 'js/register.js' %}"></script>
-</body>
-</html>
+  {% endblock content %}
+

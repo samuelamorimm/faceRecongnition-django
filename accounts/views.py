@@ -8,7 +8,7 @@ import face_recognition
 
 # Create your views here.
 def dashboard(request):
-  return render(request, 'base.html')
+  return render(request, 'dash.html')
 
 def home(request):
   return render(request, 'home.html')

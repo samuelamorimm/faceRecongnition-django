@@ -73,15 +73,15 @@
 </head>
 <body>
     <nav class='nav-dash'>
-        <a href="">
+        <a href="{% url "dashboard" %}">
             <i class="fa-solid fa-chart-line"></i>
             Dashboard
         </a>
-        <a href="">
+        <a href="{% url "register_face" %}">
             <i class="fa-solid fa-address-card"></i>
             Banco de Faces
         </a>
-        <a href="">
+        <a href="{% url "login_face" %}">
             <i class="fa-solid fa-camera"></i>
             Autorizar acessos
         </a>
@@ -90,5 +90,8 @@
             Perfil
         </a>
     </nav>
+
+    {% block content %}
+    {% endblock content %}
 </body>
 </html>
