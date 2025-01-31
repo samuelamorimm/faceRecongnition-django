@@ -5,14 +5,32 @@
   {% block content %}
   <div class="container">
     <div class="login-container">
-      <h2>Login com reconhecimento facial</h2>
+      <div class="tutorial-container">
+        <ul>
+          <h2>Dicas</h2>
+          <li>Certifique-se de estar em um ambiente bem iluminado, com luz suficiente no rosto para que o sistema possa capturar os detalhes.</li>
+          <li>Mantenha o rosto centralizado na câmera, com os olhos voltados diretamente para ela</li>
+          <li>Durante o processo de captura, permaneça imóvel e evite movimentos bruscos.</li>
+        </ul>
+        
+        <ul class="list-num">
+          <h2>Passos para captura.</h2>
+          <li>Após posicionar seu rosto corretamente, clique no botão "Capturar Rosto".</li>
+          <li>Insira o nome do usuário a ser registrado no campo "Usuário".</li>
+          <li>Por fim, clique em "Registrar"</li>
+        </ul>
+      </div>
       <form action="" id="login-form">
-        <input type="text" name="username" id="username" placeholder="Usuário" required>
+        <h2>Autorize um acesso</h2>
         <div class="camera-container">
           <video src="" id="video" height="auto" width="500px" autoplay></video>
-          <button type="button" id="capture-button">Capturar Rosto</button>
-          <canvas style="display: none;" id="canvas" width="300" height="200"></canvas>
+          <button type="button" id="capture-button">
+            <i class="fa-solid fa-camera-retro"></i>
+            Capturar Rosto
+          </button>
+          <canvas style="display: none;" id="canvas"  height="200"></canvas>
         </div>
+        <input type="text" name="username" id="username" placeholder="Usuário" required>
         <button type="submit">Login</button>
       </form>
       <div id="message"></div>
