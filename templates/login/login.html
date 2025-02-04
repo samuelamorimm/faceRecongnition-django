@@ -12,7 +12,7 @@
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="{% static "css/login/style.css" %}">
       
-      <title>Responsive login and registration form - Bedimcode</title>
+      <title>Login SafeFace</title>
    </head>
    <body>
       <!--=============== LOGIN IMAGE ===============-->
@@ -39,7 +39,7 @@
       <div class="login container grid" id="loginAccessRegister">
          <!--===== LOGIN ACCESS =====-->
          <div class="login__access">
-            <h1 class="login__title">Log in to your account.</h1>
+            <h1 class="login__title">Entre com sua conta.</h1>
             
             <div class="login__area">
                <form action="{% url "login" %}" class="login__form" method="post">
@@ -66,33 +66,33 @@
                </form>
       
                <div class="login__social">
-                  <p class="login__social-title">Or login with</p>
+                  <p class="login__social-title">Ou faça login com</p>
       
                   <div class="login__social-links">
                      <a href="#" class="login__social-link">
-                        <img src="assets/img/icon-google.svg" alt="image" class="login__social-img">
+                        <img src="{% static "assets/img/icon-google.svg" %}" alt="image" class="login__social-img">
                      </a>
       
                      <a href="#" class="login__social-link">
-                        <img src="assets/img/icon-facebook.svg" alt="image" class="login__social-img">
+                        <img src="{% static "assets/img/icon-facebook.svg" %}" alt="image" class="login__social-img">
                      </a>
       
                      <a href="#" class="login__social-link">
-                        <img src="assets/img/icon-apple.svg" alt="image" class="login__social-img">
+                        <img src="{% static "assets/img/icon-apple.svg" %}" alt="image" class="login__social-img">
                      </a>
                   </div>
                </div>
       
                <p class="login__switch">
-                  Don't have an account? 
-                  <button id="loginButtonRegister">Create Account</button>
+                  Não tem uma conta? 
+                  <button id="loginButtonRegister">Criar conta</button>
                </p>
             </div>
          </div>
 
          <!--===== LOGIN REGISTER =====-->
          <div class="login__register">
-            <h1 class="login__title">Create new account.</h1>
+            <h1 class="login__title">Crie uma conta.</h1>
 
             <div class="login__area">
                <form action="{% url 'register' %}" method="post" class="login__form">
@@ -133,7 +133,7 @@
                </form>
    
                <p class="login__switch">
-                  Already have an account? 
+                  Já tem uma conta?
                   <button id="loginButtonAccess">Log In</button>
                </p>
             </div>

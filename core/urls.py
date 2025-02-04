@@ -21,7 +21,7 @@ from accounts.views import register, login_user, home, dashboard
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
-    path('safaface/', include('usuarios.urls')),
+    path('safeface/', include('usuarios.urls')),
     path('dashboard/', dashboard, name='dashboard'),
     path('register_face/', register, name='register_face'),
     path('login_face/', login_user, name='login_face'),
