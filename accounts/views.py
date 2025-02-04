@@ -5,10 +5,20 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.files.base import ContentFile
 from .models import *
 import face_recognition
+from django.utils import timezone
 
 # Create your views here.
 def dashboard(request):
-  return render(request, 'dash.html')
+
+  hoje = timezone.now().date()
+
+  context = {
+    'acessos': UserAccess.objects.all(),
+    'faces': UserImages.objects.all().count(),
+    'acessos_hoje': UserAccess.objects.filter(data_acesso__date=hoje).count()
+  }
+
+  return render(request, 'dash.html', context)
 
 def home(request):
   return render(request, 'home.html')
@@ -61,6 +71,9 @@ def login_user(request):
       match = face_recognition.compare_faces(stored_face_encoding, uploaded_face_ecoding)
 
       if match[0]:
+        UserAccess.objects.create(
+          user = user,
+        )
         return JsonResponse({'status' : 'success', 'message' : 'Logged in sucess'})
       else:
         return JsonResponse({'status' : 'error', 'message' : 'Logged in failed'})

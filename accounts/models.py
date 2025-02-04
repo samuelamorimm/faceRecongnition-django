@@ -8,3 +8,13 @@ class UserImages(models.Model):
 
   def __str__(self):
     return self.user.username
+
+
+
+
+class UserAccess(models.Model):
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
+  data_acesso = models.DateTimeField(auto_now_add=True)
+
+  def __str__(self):
+    return self.user.username

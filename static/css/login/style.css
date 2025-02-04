@@ -141,6 +141,7 @@ img {
   position: absolute;
   left: 1.25rem;
   font-weight: var(--font-semi-bold);
+  color: gray;
   transition: transform .4s, font-size .4s, color .4s;
 }
 
@@ -148,6 +149,7 @@ img {
   position: absolute;
   right: 1rem;
   font-size: 1.25rem;
+  color: gray;
   transition: color .4s;
 }
 
@@ -291,6 +293,10 @@ img {
   color: var(--primary-color);
 }
 
+
+
+
+
 /* Show hide login & create account */
 .active .login__access {
   transform: translateX(15rem);
@@ -305,6 +311,25 @@ img {
 }
 
 /*=============== BREAKPOINTS ===============*/
+.nav__logo {
+  position: absolute;
+  margin: 3rem;
+}
+
+.nav__logo a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.nav__logo img {
+  display: flex;
+  max-width: 36px;
+}
+
 /* For small devices */
 @media screen and (max-width: 320px) {
   .container {
@@ -361,3 +386,4 @@ img {
     transform: translate(0rem, 0rem);
   }
 }
+

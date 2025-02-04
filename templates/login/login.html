@@ -15,6 +15,14 @@
       <title>Login SafeFace</title>
    </head>
    <body>
+      <div class="nav__logo">
+         <a href="#">
+           <img src="{%static 'assets/logo.png'%}" alt="logo" />
+           <span>SafeFace</span>
+         </a>
+       </div>
+
+
       <!--=============== LOGIN IMAGE ===============-->
       <svg class="login__blob" viewBox="0 0 566 840" xmlns="http://www.w3.org/2000/svg">
          <mask id="mask0" mask-type="alpha">
@@ -47,7 +55,7 @@
                   <div class="login__content grid">
                      <div class="login__box">
                         <input type="email" id="email" required placeholder=" " class="login__input" name="email">
-                        <label for="email" class="login__label">Email</label>
+                        <label for="email" class="login__label" ">Email</label>
             
                         <i class="ri-mail-fill login__icon"></i>
                      </div>
@@ -134,7 +142,7 @@
    
                <p class="login__switch">
                   Já tem uma conta?
-                  <button id="loginButtonAccess">Log In</button>
+                  <button id="loginButtonAccess">Entrar</button>
                </p>
             </div>
          </div>

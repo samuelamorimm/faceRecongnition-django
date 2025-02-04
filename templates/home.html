@@ -38,7 +38,10 @@
           <li><a href="#">Sobre</a></li>
           <li><a href="#">Planos</a></li>
           <li><a href="#">Contato</a></li>
-          <li><a href="{% url 'login' %}">Entrar</a></li>
+          <div class="btnLogin-area">
+            <a class="btn-login" href="{% url 'login' %}">Entrar</a>
+            <a class="btn-login" href="{% url 'login' %}">Cadastro</a>
+          </div>
         </ul>
       </nav>
       <header class="header__container">
@@ -55,7 +58,7 @@
             Proteja seu espaço com tecnologia de ponta! O SafeFace oferece controle de acesso com reconhecimento facial preciso, garantindo segurança, praticidade e inovação para empresas, condomínios e eventos. Rápido, confiável e 100% seguro.
           </p>
           <div class="header__btn">
-            <button class="btn">Saiba Mais</button>
+            <a href="{% url 'login' %}"><button class="btn">Saiba Mais</button></a>
           </div>
           <ul class="socials">
             <li>

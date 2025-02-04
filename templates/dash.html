@@ -1,38 +1,58 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <div class="container">
-    <div class="container-dash">
-      <div class="box box1">
-        <div class="box-counts">
-          <h1>
-            <i class="fa-solid fa-chart-line"></i>
-            Acessos de hoje
-          </h1>
-          <h2>Total: 0</h2>
-        </div>
-        <div class="box-counts">
-          <h1>
-            <i class="fa-solid fa-chart-line"></i>
-            Acessos do mês
-          </h1>
-          <h2>Total: 0</h2>
-        </div>
+<div class="container">
+  <div class="container-dash">
+    <div class="box box1">
+      <div class="box-counts">
+        <h1>
+          <i class="fa-solid fa-chart-line"></i>
+          Acessos de hoje
+        </h1>
+        <h2>Total: {{acessos_hoje}}</h2>
       </div>
-      <div class="box box2">
-        <div class="box-counts">
-          <h1>
-            <i class="fa-solid fa-chart-line"></i>
-            Faces registradas
-          </h1>
-          <h2>Total: 0</h2>
-        </div>
+      <div class="box-counts">
+        <h1>
+          <i class="fa-solid fa-chart-line"></i>
+          Acessos do mês
+        </h1>
+        <h2>Total: 0</h2>
       </div>
     </div>
+    <div class="box box2">
+      <div class="box-counts">
+        <h1>
+          <i class="fa-solid fa-chart-line"></i>
+          Faces registradas
+        </h1>
+        <h2>Total: {{faces}}</h2>
+      </div>
+    </div>
+
+    <div class="container-history">
+      <h1 class="">Acessos Recentes</h1>
+
+      <table class="">
+        <tr>
+          <th>ID</th>
+          <th>User</th>   
+          <th>Data</th>
+        </tr>
+
+        {% for usuario in acessos %}
+        <tr>
+          <td>{{usuario.id}}</td>
+          <td>{{usuario}}</td>
+          <td>{{usuario.data_acesso}}</td>
+        </tr>
+        {% endfor %}
+
+      </table>
+    </div>
+
   </div>
+</div>
+
+
 
 {% endblock content %}
-
-
-
-
