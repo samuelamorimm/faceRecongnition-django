@@ -67,11 +67,4 @@ def logout(request):
     return redirect('login')
 
 
-@login_required
-def cliente(request):
-    try:
-        cliente = Cliente.objects.get(user=request.user)
-    except Cliente.DoesNotExist:
-        cliente = None
 
-    return render(request, 'login/cliente.html', {"cliente": cliente})

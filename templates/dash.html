@@ -16,7 +16,7 @@
           <i class="fa-solid fa-chart-line"></i>
           Acessos do mês
         </h1>
-        <h2>Total: 0</h2>
+        <h2>Total: {{acessos_mes}}</h2>
       </div>
     </div>
     <div class="box box2">
@@ -41,9 +41,9 @@
 
         {% for usuario in acessos %}
         <tr>
-          <td>{{usuario.id}}</td>
+          <td>#{{usuario.id}}</td>
           <td>{{usuario}}</td>
-          <td>{{usuario.data_acesso}}</td>
+          <td>{{usuario.data_acesso|date:"d/m/Y -- H:i"}}</td>
         </tr>
         {% endfor %}
 

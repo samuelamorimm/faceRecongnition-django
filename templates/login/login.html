@@ -11,12 +11,13 @@
 
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="{% static "css/login/style.css" %}">
+      <link rel="shortcut icon" href="{% static "assets/logo.png" %}" type="image/x-icon">
       
       <title>Login SafeFace</title>
    </head>
    <body>
       <div class="nav__logo">
-         <a href="#">
+         <a href="{% url "home" %}">
            <img src="{%static 'assets/logo.png'%}" alt="logo" />
            <span>SafeFace</span>
          </a>

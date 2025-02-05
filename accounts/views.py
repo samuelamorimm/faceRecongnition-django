@@ -6,23 +6,32 @@ from django.core.files.base import ContentFile
 from .models import *
 import face_recognition
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required
 def dashboard(request):
 
   hoje = timezone.now().date()
+  atual = timezone.now()
 
   context = {
     'acessos': UserAccess.objects.all(),
     'faces': UserImages.objects.all().count(),
-    'acessos_hoje': UserAccess.objects.filter(data_acesso__date=hoje).count()
+    'acessos_hoje': UserAccess.objects.filter(data_acesso__date=hoje).count(),
+    'acessos_mes': UserAccess.objects.filter(data_acesso__year=atual.year, data_acesso__month = atual.month).count(),
   }
 
   return render(request, 'dash.html', context)
 
+@login_required
+def profile(request):
+  return render(request, 'profile.html')
+
 def home(request):
   return render(request, 'home.html')
 
+@login_required
 @csrf_exempt
 def register(request):
   if request.method == 'POST':
@@ -44,6 +53,7 @@ def register(request):
     })
   return render(request, 'register_face.html')
 
+@login_required
 @csrf_exempt
 def login_user(request):
   if request.method == 'POST':
@@ -74,7 +84,7 @@ def login_user(request):
         UserAccess.objects.create(
           user = user,
         )
-        return JsonResponse({'status' : 'success', 'message' : 'Logged in sucess'})
+        return JsonResponse({'status' : 'success', 'message' : 'Acesso registrado com sucesso!'})
       else:
-        return JsonResponse({'status' : 'error', 'message' : 'Logged in failed'})
+        return JsonResponse({'status' : 'error', 'message' : 'Falha ao registrar acesso.'})
   return render(request, 'login_face.html')
